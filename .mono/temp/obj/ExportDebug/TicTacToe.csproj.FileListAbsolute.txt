@@ -1,0 +1,6 @@
+E:\Documents\Code\Games\TicTacToe\.mono\temp\bin\ExportDebug\TicTacToe.dll
+E:\Documents\Code\Games\TicTacToe\.mono\temp\bin\ExportDebug\TicTacToe.pdb
+E:\Documents\Code\Games\TicTacToe\.mono\temp\obj\ExportDebug\TicTacToe.csprojAssemblyReference.cache
+E:\Documents\Code\Games\TicTacToe\.mono\temp\obj\ExportDebug\TicTacToe.csproj.CoreCompileInputs.cache
+E:\Documents\Code\Games\TicTacToe\.mono\temp\obj\ExportDebug\TicTacToe.dll
+E:\Documents\Code\Games\TicTacToe\.mono\temp\obj\ExportDebug\TicTacToe.pdb

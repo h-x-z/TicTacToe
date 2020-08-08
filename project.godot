@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="TicTacToe"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://Assets/Banner.png"
+boot_splash/bg_color=Color( 0.00392157, 0.00392157, 0.113725, 1 )
+config/icon="res://Assets/Icon.png"
+config/windows_native_icon="res://Assets/Icon.ico"
+
+[rendering]
+
+environment/default_clear_color=Color( 0.00392157, 0.00392157, 0.113725, 1 )
+environment/default_environment="res://default_env.tres"

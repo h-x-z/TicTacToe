@@ -1,0 +1,370 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Grid.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Select.png" type="Texture" id=2]
+[ext_resource path="res://Main.cs" type="Script" id=3]
+[ext_resource path="res://Assets/Loss.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Streak.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Info.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Win.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Draw.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Select.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Conclude.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/MoveSelection.wav" type="AudioStream" id=11]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/X.png-f177ed80ac37c1e4faea2176d1642853.stex"
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/O.png-87322a2bc1e2863cd8d0a8bde0583873.stex"
+
+[sub_resource type="Environment" id=3]
+background_mode = 4
+fog_sun_amount = 0.26
+fog_depth_begin = 12.1
+fog_depth_curve = 3.36359
+fog_transmit_enabled = true
+fog_transmit_curve = 0.757858
+fog_height_enabled = true
+fog_height_curve = 1.62451
+auto_exposure_scale = 0.01
+auto_exposure_min_luma = 0.0
+auto_exposure_max_luma = 2.23
+ssao_radius = 3.05
+ssao_intensity = 50.23
+ssao_radius2 = 53.45
+ssao_intensity2 = 69.92
+ssao_bias = 3.614
+ssao_light_affect = 1.0
+ssao_color = Color( 0.819608, 0.0392157, 0.0392157, 1 )
+dof_blur_near_distance = 1.74
+glow_enabled = true
+glow_intensity = 4.3
+glow_strength = 1.05
+glow_bloom = 0.58
+glow_hdr_threshold = 0.53
+glow_hdr_luminance_cap = 41.24
+glow_hdr_scale = 4.0
+glow_bicubic_upscale = true
+adjustment_enabled = true
+adjustment_contrast = 1.2
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 478.877, 275.46 )
+script = ExtResource( 3 )
+
+[node name="Grid" type="Sprite" parent="."]
+position = Vector2( -208, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="SelectionSlots" type="Node" parent="."]
+
+[node name="Slot_1" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 256.164, 162.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_2" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 343.164, 162.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_3" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 429.164, 162.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_4" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 256.164, 249.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_5" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 343.164, 249.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_6" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 429.164, 249.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_7" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 256.164, 336.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_8" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 343.164, 336.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Slot_9" type="Sprite" parent="SelectionSlots"]
+visible = false
+position = Vector2( 429.164, 336.46 )
+scale = Vector2( 0.0967248, 0.0967248 )
+texture = ExtResource( 2 )
+offset = Vector2( -749.564, 432 )
+
+[node name="Crosses" type="Node" parent="."]
+
+[node name="Cross_1" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 184.164, 205.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_2" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 270.164, 205.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_3" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 356.164, 205.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_4" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 184.164, 291.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_5" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 270.164, 291.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_6" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 356.164, 291.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_7" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 184.164, 376.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_8" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 270.164, 376.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Cross_9" type="Sprite" parent="Crosses"]
+visible = false
+position = Vector2( 356.164, 376.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 1 )
+
+[node name="Notes" type="Node" parent="."]
+
+[node name="Note_1" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 184.164, 205.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_2" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 272.164, 205.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_3" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 358.164, 205.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_4" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 184.164, 292.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_5" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 272.164, 292.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_6" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 358.164, 292.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_7" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 184.164, 377.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_8" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 272.164, 377.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Note_9" type="Sprite" parent="Notes"]
+visible = false
+position = Vector2( 358.164, 377.46 )
+scale = Vector2( 0.097, 0.097 )
+texture = SubResource( 2 )
+
+[node name="Streaks" type="Node" parent="."]
+
+[node name="Streak_1" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 181.942, 292.05 )
+scale = Vector2( 1, 0.396234 )
+texture = ExtResource( 5 )
+
+[node name="Streak_2" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 267.942, 292.05 )
+scale = Vector2( 1, 0.396234 )
+texture = ExtResource( 5 )
+
+[node name="Streak_3" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 354.942, 292.05 )
+scale = Vector2( 1, 0.396234 )
+texture = ExtResource( 5 )
+
+[node name="Streak_4" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 267.942, 207.05 )
+rotation = 1.5708
+scale = Vector2( 1, 0.396234 )
+texture = ExtResource( 5 )
+
+[node name="Streak_5" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 267.942, 289.05 )
+rotation = 1.5708
+scale = Vector2( 1, 0.396234 )
+texture = ExtResource( 5 )
+
+[node name="Streak_6" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 267.942, 384.05 )
+rotation = 1.5708
+scale = Vector2( 1, 0.396234 )
+texture = ExtResource( 5 )
+
+[node name="Streak_7" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 271.447, 292.806 )
+rotation = 2.37131
+scale = Vector2( 1, 0.453951 )
+texture = ExtResource( 5 )
+
+[node name="Streak_8" type="Sprite" parent="Streaks"]
+visible = false
+position = Vector2( 273.447, 297.806 )
+rotation = 3.92602
+scale = Vector2( 1, 0.453951 )
+texture = ExtResource( 5 )
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="ClearBoardTimer" type="Timer" parent="Timers"]
+wait_time = 2.0
+
+[node name="Messages" type="Node" parent="."]
+
+[node name="Win" type="Sprite" parent="Messages"]
+visible = false
+position = Vector2( 763.017, 463.838 )
+scale = Vector2( 0.357193, 0.357193 )
+texture = ExtResource( 7 )
+
+[node name="Loss" type="Sprite" parent="Messages"]
+visible = false
+position = Vector2( 763.017, 463.838 )
+scale = Vector2( 0.357, 0.357 )
+texture = ExtResource( 4 )
+
+[node name="Draw" type="Sprite" parent="Messages"]
+visible = false
+position = Vector2( 763.017, 463.838 )
+scale = Vector2( 0.357, 0.357 )
+texture = ExtResource( 8 )
+
+[node name="Scores" type="Node" parent="."]
+
+[node name="Names" type="Label" parent="Scores"]
+margin_left = 9.87701
+margin_top = 559.46
+margin_right = 114.877
+margin_bottom = 590.46
+text = "Player:
+Bot:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="Label" parent="Scores"]
+margin_left = 57.1274
+margin_top = 559.053
+margin_right = 97.1274
+margin_bottom = 573.053
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bot" type="Label" parent="Scores"]
+margin_left = 41.1274
+margin_top = 576.053
+margin_right = 81.1274
+margin_bottom = 590.053
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="MoveSelection" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 11 )
+
+[node name="Select" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 9 )
+
+[node name="Conclude" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 10 )
+
+[node name="Info" type="Sprite" parent="."]
+position = Vector2( 270.441, 12.6823 )
+scale = Vector2( 0.330397, 0.330397 )
+texture = ExtResource( 6 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
